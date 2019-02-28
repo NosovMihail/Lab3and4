@@ -29,6 +29,13 @@ public class Main {
         areasForMap.add(mostHightRock);
         areasForMap.add(canyon);
         Map map;
+        System.out.println("Веберите режим: история/управление(и/у)");
+        Scanner progMod = new Scanner(System.in);
+        String pMode = progMod.nextLine();
+        progMod.close();
+        if(pMode.equalsIgnoreCase("и")){
+            mode = false;
+        }
         if(mode){
             map = new Map(areasForMap, 16, GenerationType.ISLAND);
         }
