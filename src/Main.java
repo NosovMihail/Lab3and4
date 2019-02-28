@@ -30,9 +30,8 @@ public class Main {
         areasForMap.add(canyon);
         Map map;
         System.out.println("Веберите режим: история/управление(и/у)");
-        Scanner progMod = new Scanner(System.in);
-        String pMode = progMod.nextLine();
-        progMod.close();
+        Scanner in = new Scanner(System.in);
+        String pMode = in.nextLine();
         if(pMode.equalsIgnoreCase("и")){
             mode = false;
         }
@@ -96,7 +95,6 @@ public class Main {
         surf.setArea(mostHightRock);
 
         if(mode){
-            Scanner in = new Scanner(System.in);
             String command = in.nextLine();
             for(;!command.equalsIgnoreCase("выход");){
                 if(command.equalsIgnoreCase("оглядеться")) {
@@ -189,7 +187,6 @@ public class Main {
             gold.show("Это было", TextPosition.BEFORE);
             gold.show(", ничто иное как", TextPosition.BEFORE);
             endLine("!");
-            System.out.println(sea.getClass().equals(Area.class));
         }
     }
 
